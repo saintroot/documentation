@@ -71,7 +71,8 @@ Changed APIs
 Deprecated APIs
 ^^^^^^^^^^^^^^^
 
-* ``\OCP\DB\IResult::fetch``: use the new ``fetchAssociative``, ``fetchNumeric`` and ``fetchOne`` instead.
+* ``\OCP\DB\IResult::fetch``: use the new ``fetchAssociative``, ``fetchNumeric`` and ``fetchOne`` instead. If you called ``fetch`` without arguments, ``fetchAssociative`` is the direct replacement.
+* ``\OCP\DB\IResult::fetchAll``: use the new ``fetchAllAssociative``, ``fetchAllNumeric`` and ``fetchOne`` instead. If you called ``fetchAll`` without arguments, ``fetchAllAssociative`` is the direct replacement.
 * ``\OCP\Preview\BeforePreviewFetchedEvent`` passing ``null`` for ``width, height, crop or mode`` is deprecated. Starting with Nextcloud 31 they are mandatory.
 
 Removed APIs
