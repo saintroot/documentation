@@ -32,6 +32,7 @@ To use a memcache with Transactional File Locking, you must install the Redis
 server and corresponding PHP module. After installing Redis you must enter a
 configuration in your ``config.php`` file like this example::
 
+  'memcache.distributed' => '\OC\Memcache\Redis',
   'filelocking.enabled' => true,
   'memcache.locking' => '\OC\Memcache\Redis',
   'redis' => array(
@@ -48,6 +49,7 @@ If you want to configure Redis to listen on an Unix socket (which is
 recommended if Redis is running on the same system as Nextcloud) use this example
 ``config.php`` configuration::
 
+  'memcache.distributed' => '\OC\Memcache\Redis',
   'filelocking.enabled' => true,
   'memcache.locking' => '\OC\Memcache\Redis',
   'redis' => array(
